@@ -1,0 +1,346 @@
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0f172a;
+  background-color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+#root {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+.app-shell {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.app-shell.full-width {
+  max-width: none;
+  width: 100%;
+  padding: 24px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+nav a {
+  margin-right: 0.75rem;
+  text-decoration: none;
+  color: #475467;
+}
+
+nav a.active {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.65rem 1.2rem;
+  font-size: 1rem;
+  background: #0f172a;
+  color: #fff;
+}
+
+button[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.08);
+  margin-bottom: 1rem;
+}
+
+.card.program-card {
+  margin-top: 1.5rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+  gap: 0.35rem;
+}
+
+input {
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d0d5dd;
+  font-size: 1rem;
+}
+
+.exercise-row {
+  border-top: 1px solid #e4e7ec;
+  padding: 0.75rem 0;
+}
+
+.exercise-row:first-of-type {
+  border-top: none;
+}
+
+.exercise-row-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.row-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-button {
+  background: #f2f4f7;
+  color: #0f172a;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.program-divider {
+  border-top: 1px dashed #d0d5dd;
+  margin: 1rem 0;
+}
+
+.start-button {
+  width: 100%;
+  background: #d1fadf;
+  color: #054f31;
+  font-weight: 600;
+}
+
+.finish-button {
+  width: 100%;
+  margin-top: 0.5rem;
+  background: #fee4e2;
+  color: #b42318;
+  font-weight: 600;
+}
+
+.finish-button-inline {
+  background: #fee4e2;
+  color: #b42318;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.open-session {
+  width: 100%;
+  margin-top: 0.5rem;
+  background: #eef2ff;
+  color: #3538cd;
+  font-weight: 600;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.confirm-actions button {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.rest-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.set-reps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: min(480px, calc(100% - 2rem));
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.3);
+  z-index: 1001;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+button.ghost {
+  background: transparent;
+  color: #0f172a;
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+button.ghost:focus-visible {
+  outline: 2px solid #0f172a;
+}
+
+.ghost.danger {
+  color: #b42318;
+}
+
+.close-button {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.error {
+  color: #b42318;
+}
+
+.success-text {
+  color: #027a48;
+  margin-top: 0.75rem;
+}
+
+.session-screen {
+  min-height: calc(100vh - 3rem);
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #f8fafc;
+}
+
+.session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+  flex: 1;
+}
+
+.session-card.stepper-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.card-stepper-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-stepper-column .circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #d0d5dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #475467;
+}
+
+.card-stepper-column .circle.done {
+  background: #d1fadf;
+  border-color: #12b76a;
+  color: #027a48;
+}
+
+.card-stepper-column .circle.active {
+  background: #12b76a;
+  border-color: #12b76a;
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(18, 183, 106, 0.15);
+}
+
+.card-body {
+  flex: 1;
+  min-width: 240px;
+}
+
+.session-status {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #475467;
+  margin-bottom: 0.5rem;
+}
+
+.session-card h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+.step-label {
+  color: #475467;
+  margin: 0 0 0.5rem 0;
+}
+
+.session-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.skip-button {
+  width: 100%;
+  background: #f2f4f7;
+  color: #0f172a;
+}
