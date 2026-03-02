@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+dev-dist/
+
+# Local configs
+.vercel/
+.env*
+
+# System files
+.DS_Store
